@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tutoring Services - About</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Tutoring Services</h1>
+  </header>
+  <nav>
+    <select id="subjectDropdown">
+      <option value="">Select a subject</option>
+      <option value="programs">Programs</option>
+      <option value="career">Career</option>
+      <option value="support">Support</option>
+      <option value="events">Events</option>
+      <option value="about">About</option>
+    </select>
+    <button onclick="goToSelectedSubject()">Go</button>
+  </nav>
+  <main>
+    <div id="content">
+      <h2>About</h2>
+      <!-- Add content specific to each subject here -->
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2023 Axioma Teaching. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function goToSelectedSubject() {
+      const dropdown = document.getElementById('subjectDropdown');
+      const selectedSubject = dropdown.value;
+      if (selectedSubject !== "") {
+        window.location.href = selectedSubject + ".html";
+      }
+    }
+  </script>
+</body>
+</html>
